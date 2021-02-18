@@ -20,7 +20,7 @@ namespace BookStoreProject.Controllers
             _logger = logger;
             _repository = repository;
         }
-
+        // Push stored model from database to view
         public IActionResult Index()
         {
             return View(_repository.Projects);

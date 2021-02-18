@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookStoreProject.Models
 {
+    // create the context for the model
     public class BookDbContext : DbContext
     {
 

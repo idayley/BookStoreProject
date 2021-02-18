@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BookStoreProject.Models
 {
+    // project class definition
     public class Project
     {
         [Key]
@@ -17,6 +18,7 @@ namespace BookStoreProject.Models
         public string Author { get; set; }
         [Required]
         public string Publisher { get; set; }
+        // regular expression to check isbn
         [Required]
         [RegularExpression("^[0 - 9][0 - 9][0 - 9][-][0 - 9][0 - 9][0 - 9][0 - 9][0 - 9][0 - 9][0 - 9][0 - 9][0 - 9][0 - 9]$")]
         public string ISBN { get; set; }

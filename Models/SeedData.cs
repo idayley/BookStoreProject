@@ -23,6 +23,8 @@ namespace BookStoreProject.Models
             {
                 context.Projects.AddRange(
 
+                    // add a bunch of default data if none exists
+
                     new Project
                     {
                         Title = "Les Miserables",
@@ -45,7 +47,6 @@ namespace BookStoreProject.Models
 
                     },
 
-                    // ------------
 
                     new Project
                     {
