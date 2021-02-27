@@ -144,6 +144,39 @@ namespace BookStoreProject.Models
                         Price = 15.03f,
                         BookPages = 642
 
+                    },
+
+                    new Project
+                    {
+                        Title = "That Hideous Strength",
+                        Author = "C. S. Lewis",
+                        Publisher = "Scribner",
+                        ISBN = "978-0743234924",
+                        Classification = "Science Fiction",
+                        Price = 15.39f,
+                        BookPages = 384
+                    },
+
+                    new Project
+                    {
+                        Title = "Dracula",
+                        Author = "Bram Stoker",
+                        Publisher = "Wordsworth Editions Ltd",
+                        ISBN = "978-1853260865",
+                        Classification = "Fiction",
+                        Price = 11.69f,
+                        BookPages = 352
+                    },
+
+                    new Project
+                    {
+                        Title = "The Pilgrim's Regress",
+                        Author = "C. S. Lewis",
+                        Publisher = "Eerdmans",
+                        ISBN = "978-0802872173",
+                        Classification = "Classic",
+                        Price = 16.00f,
+                        BookPages = 256
                     }
 
 
