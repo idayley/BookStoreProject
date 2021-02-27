@@ -32,7 +32,8 @@ namespace BookStoreProject.Models
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
                         Classification = "Fiction, Classic",
-                        Price = 9.95f
+                        Price = 9.95f,
+                        BookPages = 1488
 
                     },
 
@@ -43,7 +44,8 @@ namespace BookStoreProject.Models
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction, Biography",
-                        Price = 14.58f
+                        Price = 14.58f,
+                        BookPages = 944
 
                     },
 
@@ -55,7 +57,8 @@ namespace BookStoreProject.Models
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction, Biography",
-                        Price = 21.54f
+                        Price = 21.54f,
+                        BookPages = 832
 
                     },
 
@@ -66,7 +69,8 @@ namespace BookStoreProject.Models
                         Publisher = "Random House",
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction, Biography",
-                        Price = 11.61f
+                        Price = 11.61f,
+                        BookPages = 864
 
                     },
 
@@ -77,7 +81,8 @@ namespace BookStoreProject.Models
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction, Historical",
-                        Price = 13.33f
+                        Price = 13.33f,
+                        BookPages = 528
 
                     },
 
@@ -88,7 +93,8 @@ namespace BookStoreProject.Models
                         Publisher = "Vintage",
                         ISBN = "978-0804171281",
                         Classification = "Fiction, Historical Fiction",
-                        Price = 15.95f
+                        Price = 15.95f,
+                        BookPages = 288
 
                     },
                     
@@ -99,7 +105,8 @@ namespace BookStoreProject.Models
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction, Self-Help",
-                        Price = 14.99f
+                        Price = 14.99f,
+                        BookPages = 304
 
                     },
 
@@ -110,7 +117,8 @@ namespace BookStoreProject.Models
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction, Self-Help",
-                        Price = 21.66f
+                        Price = 21.66f,
+                        BookPages = 240
 
                     },
 
@@ -121,7 +129,8 @@ namespace BookStoreProject.Models
                         Publisher = "Portfolio",
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction, Business",
-                        Price = 29.16f
+                        Price = 29.16f,
+                        BookPages = 400
 
                     },
 
@@ -132,7 +141,8 @@ namespace BookStoreProject.Models
                         Publisher = "Bantam",
                         ISBN = "978-0553393613",
                         Classification = "Fiction, Thrillers",
-                        Price = 15.03f
+                        Price = 15.03f,
+                        BookPages = 642
 
                     }
 

@@ -2,7 +2,9 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model  IQueryable<Project>
+@model  ProjectListViewModel
+
+
 <div class="text-center">
     <h1>Bookstore</h1>
 </div>
@@ -11,10 +13,10 @@
 
 <table class="table">
     <thead>
-        <tr><th>Title</th><th>Author</th><th>Publisher</th><th>ISBN</th><th>Classification</th><th>Price</th></tr>
+        <tr><th>Title</th><th>Author</th><th>Publisher</th><th>ISBN</th><th>Classification</th><th>Price</th><th>Page Number</th></tr>
     </thead>
     <tbody>
-        @foreach (var x in Model)
+        @foreach (var x in Model.Projects)
         {
             <tr>
                 <td>@x.Title</td>
@@ -23,7 +25,14 @@
                 <td>@x.ISBN</td>
                 <td>@x.Classification</td>
                 <td>@x.Price</td>
+                <td>@x.BookPages</td>
             </tr>
         }
     </tbody>
 </table>
+
+<br />
+<div page-model="@Model.Paginginfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
+     page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary"
+     class="btn-group pull-right m-1"></div>

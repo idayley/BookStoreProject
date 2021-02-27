@@ -55,11 +55,15 @@ namespace BookStoreProject
 
             app.UseAuthorization();
 
+            // add custom endpoints to change how the URL works
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    "pagination",
+                    "P{page}",
+                    new {Controller = "Home", action = "Index"});
+
+                endpoints.MapDefaultControllerRoute();
             });
 
             SeedData.EnsurePopulated(app);
