@@ -58,6 +58,18 @@ namespace BookStoreProject
             // add custom endpoints to change how the URL works
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("page",
+                    "{page:int}",
+                    new { Controller = "Home", action = "index" });
+
+                endpoints.MapControllerRoute("category",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1});
+
                 endpoints.MapControllerRoute(
                     "pagination",
                     "P{page}",

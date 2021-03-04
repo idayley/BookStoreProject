@@ -5,34 +5,26 @@
 @model  ProjectListViewModel
 
 
-<div class="text-center">
-    <h1>Bookstore</h1>
-</div>
 
 <!-- This page returns the list of books stored in the database-->
 
-<table class="table table-striped table-hover">
-    <thead class="thead-light">
-        <tr><th>Title</th><th>Author</th><th>Publisher</th><th>ISBN</th><th>Classification</th><th>Price</th><th>Page Number</th></tr>
-    </thead>
-    <tbody>
-        @foreach (var x in Model.Projects)
-        {
-            <tr class="">
-                <td>@x.Title</td>
-                <td>@x.Author</td>
-                <td>@x.Publisher</td>
-                <td>@x.ISBN</td>
-                <td>@x.Classification</td>
-                <td>@x.Price</td>
-                <td>@x.BookPages</td>
-            </tr>
-        }
-    </tbody>
-</table>
+
+<div class="col-lg-11">
+    <table class="table table-striped table-hover">
+        <thead class="thead-light">
+            <tr><th>Title</th><th>Author</th><th>Publisher</th><th>ISBN</th><th>Classification</th><th>Category</th><th>Price</th><th>Page Number</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model.Projects)
+            {
+                <partial name="BookSummary" model="x" />
+            }
+        </tbody>
+    </table>
+</div>
 
 <br />
 <div page-model="@Model.Paginginfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
      page-class-normal="btn-outline-dark"
-     page-class-selected="btn-primary"
+     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
      class="btn-group pull-right m-1"></div>

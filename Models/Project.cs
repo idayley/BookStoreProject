@@ -25,6 +25,8 @@ namespace BookStoreProject.Models
         [Required]
         public string Classification { get; set; }
         [Required]
+        public string Category { get; set; }
+        [Required]
         public float Price { get; set; }
         [Required]
         public int BookPages { get; set; }

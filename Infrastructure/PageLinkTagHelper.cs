@@ -24,10 +24,12 @@ namespace BookStoreProject.Infrastructure
         [ViewContext]
         [HtmlAttributeNotBound]
         public ViewContext ViewContext { get; set; }
-
         public Paginginfo PageModel { get; set; }
-
         public string PageAction { get; set; }
+
+        // assignment 7, getting the page numbers to load correctly
+        [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
+        public Dictionary<string, object> PageUrlValues { get; set; } = new Dictionary<string, object>();
 
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; }
@@ -45,7 +47,11 @@ namespace BookStoreProject.Infrastructure
             for (int i = 1; i <= PageModel.TotalPages; i++)
             {
                 TagBuilder tag = new TagBuilder("a");
-                tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i });
+
+                PageUrlValues["page"] = i;
+
+                tag.Attributes["href"] = urlHelper.Action(PageAction,
+                    PageUrlValues);
 
                 if (PageClassesEnabled)
                 {
