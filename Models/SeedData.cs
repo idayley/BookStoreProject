@@ -6,20 +6,24 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 
+// The static EnsurePopulated method receives an IApplicationBuilder argument, which is the interface 
+// used in the Configure method of the Startup class to register middleware components to handle HTTP requests. 
+// IApplicationBuilder also provides access to the application’s services, including the Entity Framework Core database context service.
+
 namespace BookStoreProject.Models
 {
     public class SeedData
     {
         public static void EnsurePopulated(IApplicationBuilder application)
         {
-            BookDbContext context = application.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<BookDbContext>();
+            BookDbContext context = application.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<BookDbContext>(); // add scoped : set up each user to have their own session
         
             if(context.Database.GetPendingMigrations().Any())
             {
                 context.Database.Migrate();
             }
 
-            if (!context.Projects.Any())
+            if (!context.Projects.Any()) // if there are no projects objects in the database, then set up these ones
             {
                 context.Projects.AddRange(
 

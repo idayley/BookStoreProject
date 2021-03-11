@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// creating your own tag helpers for the html
+
+
 namespace BookStoreProject.Infrastructure
 {
     [HtmlTargetElement("div", Attributes = "page-model")]
@@ -42,21 +45,21 @@ namespace BookStoreProject.Infrastructure
         {
             IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
 
-            TagBuilder result = new TagBuilder("div");
+            TagBuilder result = new TagBuilder("div"); // build the link  tag
 
             for (int i = 1; i <= PageModel.TotalPages; i++)
             {
-                TagBuilder tag = new TagBuilder("a");
+                TagBuilder tag = new TagBuilder("a"); // will be a link
 
-                PageUrlValues["page"] = i;
+                PageUrlValues["pageNum"] = i;
 
                 tag.Attributes["href"] = urlHelper.Action(PageAction,
-                    PageUrlValues);
+                    PageUrlValues); // set the action value to the link above
 
                 if (PageClassesEnabled)
                 {
                     tag.AddCssClass(PageClass);
-                    tag.AddCssClass(i == PageModel.CurrentPage ? PageClassSelected : PageClassNormal);
+                    tag.AddCssClass(i == PageModel.CurrentPage ? PageClassSelected : PageClassNormal); // test statment ? if true : if false
 
                 }
 

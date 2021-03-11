@@ -18,3 +18,7 @@ namespace BookStoreProject.Models
 
     }
 }
+
+// To create an implementation of the repository interface, add a class file named EFStoreRepository.cs in the Models folder and use it to define the class
+
+
